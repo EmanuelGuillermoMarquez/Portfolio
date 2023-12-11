@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px var(--shadow-color);
+    padding: 0 50px 0 50px
+}
+
+/* .logo{
+flex-direction: column;
+align-items: center;
+margin-left: 30px;
+text-decoration: none;
+
+} */
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--foreground-color);
+}
+.item_selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--special-color);
+}
+
+.underline {
+    width: 0;
+    height: 1px;
+    margin: 2px;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.item:hover .underline {
+    background-color: var(--special-color);
+    width: 100%;
+    
+}
+
+.theme_switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    width: 40px;
+    height: 22px;
+    padding: 2px;
+    border: 2px solid var(--special-color);
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.theme_switch::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 15px;
+    height: 15px;
+    margin-left: 1px;
+    left: 0;
+    right: unset;
+    border: solid thin var(--background-start-rgb);
+    border-radius: 50%;
+    background-color: var(--special-color);
+    transition: 0.3s ease;
+}
+.theme_switch.dark_mode::before {
+    left: unset;
+    transform: translateX(100%);
+    border: solid thin black;
+}
+
+/* .logout{
+    padding: 5px;
+    border: none;
+    background-color:#53c28b;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+    .theme_switch::before {
+        left: unset;
+        transform: translateX(100%);
+    }
+} */
+  

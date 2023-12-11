@@ -1,43 +1,35 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import { Typewriter } from '@/components/typewriter/Typewriter';
+import { Jost } from 'next/font/google';
+import styles from './page.module.css';
+import { GlowHover } from '@/components/glowhover/GlowHover';
+
+const jost = Jost({ subsets: ['latin'] });
 
 export default function Home() {
+  const sequence = [
+    "I'm a Fullstack Web Developer ",
+    2000,
+    "I'm a profesional UI/UX Designer ", // initially rendered starting point
+    2000,
+    "I'm a Lawyer too... ",
+    2000,
+    /* "I'm a Fullstack Web Developer",
+    1000, */
+  ]
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div style={{width:'100%', display:'flex', justifyContent:'space-between', gap:'200px'}}>
+        <div className={styles.center}>
+          <h1><span>{'<'}</span>{' Emanuel Marquez '}<span>{'/>'}</span></h1>
+          <div className={styles.description && jost.className}>
+            <Typewriter sequence={sequence} />
+          </div>
         </div>
+        <Image src='/profile_image.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <GlowHover/>
 
       <div className={styles.grid}>
         <a
