@@ -22,12 +22,12 @@ const links = [
     url: '/proyects'
   },
   {
-    title: 'About',
-    url: '/about'
-  },
-  {
     title: 'Services',
     url: '/services'
+  },
+  {
+    title: 'About',
+    url: '/about'
   },
   {
     title: 'Contact',

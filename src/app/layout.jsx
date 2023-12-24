@@ -1,5 +1,6 @@
 import { Inter , Jost } from 'next/font/google';
 import Navbar from '@/components/navbar/NavBar';
+import Footer from '@/components/footer/Footer';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,6 +19,9 @@ export default function RootLayout({ children }) {
           <Navbar/>
         </section>
         {children}
+        <footer className={jost.className} >
+          <Footer/>
+        </footer>
       </body>
     </html>
   );

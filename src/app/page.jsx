@@ -3,6 +3,9 @@ import { Typewriter } from '@/components/typewriter/Typewriter';
 import { Jost } from 'next/font/google';
 import styles from './page.module.css';
 import { GlowHover } from '@/components/glowhover/GlowHover';
+import Slider from '@/components/slider/Slider';
+import Education from '@/components/background/Education';
+import Experience from '@/components/background/Experience';
 
 const jost = Jost({ subsets: ['latin'] });
 
@@ -19,69 +22,51 @@ export default function Home() {
   ]
   return (
     <main className={styles.main}>
-      <div style={{width:'100%', display:'flex', justifyContent:'space-between', gap:'200px'}}>
-        <div className={styles.center}>
-          <h1><span>{'<'}</span>{' Emanuel Marquez '}<span>{'/>'}</span></h1>
-          <div className={styles.description && jost.className}>
-            <Typewriter sequence={sequence} />
+
+      <div className={styles.header}>
+
+        <div className={styles.container}>
+          <div className={styles.section_info}>
+            <h1><span>{'<'}</span>{' Emanuel Marquez '}<span>{'/>'}</span></h1>
+            <div className={styles.description && jost.className}>
+              <Typewriter sequence={sequence} />
+            </div>
           </div>
+          <Image src='/profile_image.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
         </div>
-        <Image src='/profile_image.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
+
+
+        <div className={styles.grid}>
+          <a href='#education' className={styles.card}>
+            <h2>Education</h2>
+            <p>Information about my academic background.</p>
+          </a>
+          <a href='#experiencie' className={styles.card}>
+            <h2>Experience</h2>
+            <p>Information about my professional experience.</p>
+          </a>
+          <a href='#technologies' className={styles.card}>
+            <h2>Technologies</h2>
+            <p>Knowledge of various web development technologies.</p>
+          </a>
+          <a href='#' className={styles.card}>
+            <h2>Skills</h2>
+            <p>Learn about my skills as a developer.</p>
+          </a>
+        </div>
+
+        <GlowHover/>
+
       </div>
 
-      <GlowHover/>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div id='technologies' style={{height:'650px', width:'100%', paddingTop:'200px', paddingBottom:'150px'}}>
+        <Slider/>
       </div>
+
+      <Education/>
+
+      <Experience/>
+
     </main>
   )
 }

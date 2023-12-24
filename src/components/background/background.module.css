@@ -1,0 +1,45 @@
+.education_container {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    padding: 100px;
+    gap: 30px;
+}
+
+.experience_container {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    padding: 100px;
+    gap: 30px;
+    text-align: right;
+}
+
+.education_container h2, .experience_container h2 {
+    margin: 10px 0 10px 0;
+    color: var(--special-color);
+}
+
+.education_container hr, .experience_container hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--special-color);
+    border: none;
+}
+
+.education_container p, .experience_container p {
+    line-height: 2;
+}
+
+.experience_container strong {
+    color: var(--special-color);
+}
+

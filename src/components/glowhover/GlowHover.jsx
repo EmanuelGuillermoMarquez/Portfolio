@@ -32,8 +32,9 @@ export const GlowHover = () => {
             
     }
 
-    window.addEventListener('mousemove', pointerMove);
-
+    if(typeof window !== 'undefined') {
+        window.addEventListener('mousemove', pointerMove);
+    };
 
     return (
         <div id='box-wrap' className={styles.container} /* onMouseMove={pointerMove} */>
