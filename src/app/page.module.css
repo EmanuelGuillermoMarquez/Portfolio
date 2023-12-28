@@ -117,6 +117,37 @@
   max-width: 100%;
 }
 
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 100px;
+  /* white-space: nowrap; */
+}
+.contact_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4rem 0;
+  width: 500px;
+  /* white-space: nowrap; */
+}
+.contact_header h2 {
+  line-height: 60px;
+  letter-spacing: 0.8rem;
+  font-size: 32px;
+
+}
+.contact_header strong {
+  color: var(--special-color);
+}
+.contact_section button {
+  align-self: flex-end;
+}
+
 /* Habilita el efecto hover solo en dispositivos no tactiles */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -216,6 +247,10 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  }
+
+  .contact_header {
+    width: 100%;
   }
 }
 

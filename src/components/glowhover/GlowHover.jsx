@@ -1,12 +1,26 @@
 'use client'
 
 import React, { useRef } from 'react';
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './glow.module.css';
 
 export const GlowHover = () => {
 
     const elementRef = useRef(null);
+    const path = usePathname();
+    const home = path === '/' || path.includes('#');
 
+    useEffect(() => {
+        if(home) {
+            console.log(home);
+            window.addEventListener('mousemove', pointerMove);
+        }
+
+        return () => {
+            window.removeEventListener('mousemove', pointerMove)
+        };
+    },[home]);
     
     const pointerMove = (e) => {
 
@@ -32,9 +46,11 @@ export const GlowHover = () => {
             
     }
 
-    if(typeof window !== 'undefined') {
+    // Movido al useEffect para desmontar el evento al cambiar la ruta
+    
+    /* if(typeof window !== 'undefined') {
         window.addEventListener('mousemove', pointerMove);
-    };
+    }; */
 
     return (
         <div id='box-wrap' className={styles.container} /* onMouseMove={pointerMove} */>

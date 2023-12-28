@@ -1,15 +1,16 @@
 import Image from 'next/image';
-import { Typewriter } from '@/components/typewriter/Typewriter';
 import { Jost } from 'next/font/google';
-import styles from './page.module.css';
+import { Typewriter } from '@/components/typewriter/Typewriter';
 import { GlowHover } from '@/components/glowhover/GlowHover';
 import Slider from '@/components/slider/Slider';
 import Education from '@/components/background/Education';
 import Experience from '@/components/background/Experience';
+import styles from './page.module.css';
 
 const jost = Jost({ subsets: ['latin'] });
 
 export default function Home() {
+
   const sequence = [
     "I'm a Fullstack Web Developer ",
     2000,
@@ -66,6 +67,13 @@ export default function Home() {
       <Education/>
 
       <Experience/>
+
+      <div className={styles.contact_section}>
+        <div className={styles.contact_header}>
+          <h2>Let's <strong>build</strong> something great!</h2>
+        </div>
+        <button>See more...</button>
+      </div>
 
     </main>
   )
