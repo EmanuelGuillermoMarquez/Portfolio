@@ -20,6 +20,8 @@ export default function Education() {
 
             <p>Law degree issued by the Faculty of Legal and Social Sciences of the Universidad Nacional del Litoral in Santa Fe.</p>
 
+            <button>Curriculum</button>
+
         </div>
     );
 };

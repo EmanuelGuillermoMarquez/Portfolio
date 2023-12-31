@@ -87,3 +87,41 @@
 .links div:hover > p {
     transform: translateX(20px);
 } */
+
+@media (max-width: 800px) {
+    .header {
+        width: 100%;
+    }
+    .header h1 {
+        font-size: 36px;
+        letter-spacing: 0.5rem;
+    }
+    .info p {
+        font-size: 16px;
+    }
+    .links p {
+        color: var(--special-color);
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        width: 100%;
+    }
+    .header h1 {
+        font-size: 32px;
+        letter-spacing: 0.3rem;
+    }
+    .info {
+        width: 100%;
+    }
+    .info p {
+        font-size: 16px;
+    }
+    .links {
+        width: 100%;
+    }
+    .links p {
+        color: var(--special-color);
+    }
+}

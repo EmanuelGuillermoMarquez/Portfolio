@@ -1,0 +1,59 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+    height: 80vh;
+    padding: 100px;
+    /* white-space: nowrap; */
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 0;
+    
+    /* white-space: nowrap; */
+}
+
+.text_1, .text_2 {
+    position: absolute;
+    line-height: 60px;
+    letter-spacing: 0.8rem;
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.text_1 {
+    top: 200px;
+    left: -300px;
+}
+
+.text_2 {
+    top: 260px;
+    right: -600px;
+}
+
+.header strong {
+    color: var(--special-color);
+}
+
+.container button {
+    align-self: flex-end;
+    position: relative;
+    right: -300px;
+    width: 150px;
+    /* transition: 1s ease-in-out; */
+}
+
+@media (max-width: 600px) {
+    .text_1, .text_2 {
+        letter-spacing: 0.5rem;
+        font-size: 24px;
+        white-space: nowrap;
+    }
+}

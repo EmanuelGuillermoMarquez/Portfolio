@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px;
+}
+.container button {
+    width: 150px;
+    align-self: flex-end;
+    font-size: 16px;
+    padding: 0;
+}
+.container button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: 2rem 0;
+}
+.header h1 {
+    line-height: 48px;
+    letter-spacing: 0.5rem;
+    font-size: 36px;
+    white-space: nowrap;
+
+}
+.header strong {
+    color: var(--special-color);
+}
+
+.cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 30%;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid var(--special-color);
+    border-radius: 20px;
+    background: rgba(var(--card-rgb), 0);
+    transition: 0.5s ease-in-out;
+}
+.item svg {
+    color: var(--special-color);
+}
+
+.item div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.desc {
+    min-height: 80px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .item:hover {
+      background: rgba(var(--card-rgb), 0.2);
+      box-shadow: 1px 1px 10px 0px var(--special-color);
+      border: 1px solid rgba(var(--card-border-rgb), 0.2);
+    }
+}
+
+@media (max-width: 1000px) {
+    .cards {
+        flex-direction: column;
+        gap: 30PX;
+        width: 100%;
+    }
+    .item {
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .header h1 {
+        line-height: 42px;
+        letter-spacing: 0.4rem;
+        font-size: 30px;
+    
+    }
+}
+@media (max-width: 600px) {
+    .header h1 {
+        line-height: 36px;
+        letter-spacing: 0.3rem;
+        font-size: 24px;
+    
+    }
+}

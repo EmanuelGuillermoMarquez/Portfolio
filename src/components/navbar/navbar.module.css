@@ -80,7 +80,7 @@ text-decoration: none;
     margin-left: 1px;
     left: 0;
     right: unset;
-    border: solid thin var(--background-start-rgb);
+    border: solid thin rgb(var(--background-start-rgb));
     border-radius: 50%;
     background-color: var(--special-color);
     transition: 0.3s ease;

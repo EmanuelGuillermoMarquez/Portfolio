@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Jost } from 'next/font/google';
 import { Typewriter } from '@/components/typewriter/Typewriter';
 import { GlowHover } from '@/components/glowhover/GlowHover';
+import Parallax from '@/components/parallax/Parallax';
 import Slider from '@/components/slider/Slider';
 import Education from '@/components/background/Education';
 import Experience from '@/components/background/Experience';
@@ -50,9 +51,9 @@ export default function Home() {
             <h2>Technologies</h2>
             <p>Knowledge of various web development technologies.</p>
           </a>
-          <a href='#' className={styles.card}>
-            <h2>Skills</h2>
-            <p>Learn about my skills as a developer.</p>
+          <a href='/services' className={styles.card}>
+            <h2>Services</h2>
+            <p>Learn about my web design and development services.</p>
           </a>
         </div>
 
@@ -60,7 +61,16 @@ export default function Home() {
 
       </div>
 
-      <div id='technologies' style={{height:'650px', width:'100%', paddingTop:'200px', paddingBottom:'150px'}}>
+      {/* <div className={styles.contact_section}>
+        <div className={styles.contact_header}>
+          <h2>Let's <strong>build</strong> something great!</h2>
+        </div>
+        <button><a href="/contact">Contact me!</a></button>
+      </div> */}
+
+      <Parallax/>
+
+      <div id='technologies' style={{width:'100%', paddingTop:'250px', paddingBottom:'150px'}}>
         <Slider/>
       </div>
 
@@ -68,12 +78,7 @@ export default function Home() {
 
       <Experience/>
 
-      <div className={styles.contact_section}>
-        <div className={styles.contact_header}>
-          <h2>Let's <strong>build</strong> something great!</h2>
-        </div>
-        <button>See more...</button>
-      </div>
+      
 
     </main>
   )

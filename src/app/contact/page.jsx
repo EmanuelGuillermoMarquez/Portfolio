@@ -43,13 +43,6 @@ export default function ContactPage() {
                 <a href='https://www.instagram.com/emaamarqez'>
                     <p><InstagramIcon fontSize='large'/></p>
                 </a>
-
-                {/* <div onClick={() => router.push('mailto:marquezema127@gmail.com')}>
-                    <p><strong>mail</strong></p>
-                </div>
-                <p><strong>github</strong></p>
-                <p><strong>linkdin</strong></p>
-                <p><strong>instagram</strong></p> */}
             </div>
 
         </div>

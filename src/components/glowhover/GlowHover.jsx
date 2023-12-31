@@ -13,7 +13,7 @@ export const GlowHover = () => {
 
     useEffect(() => {
         if(home) {
-            console.log(home);
+            //console.log(home);
             window.addEventListener('mousemove', pointerMove);
         }
 
