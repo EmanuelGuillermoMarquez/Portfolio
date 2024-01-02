@@ -44,3 +44,8 @@
     color: var(--special-color);
 }
 
+@media (max-width: 600px) {
+    .education_container, .experience_container {
+        padding: 100px 50px;
+    }
+}

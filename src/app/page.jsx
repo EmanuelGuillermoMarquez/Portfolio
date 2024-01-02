@@ -61,13 +61,6 @@ export default function Home() {
 
       </div>
 
-      {/* <div className={styles.contact_section}>
-        <div className={styles.contact_header}>
-          <h2>Let's <strong>build</strong> something great!</h2>
-        </div>
-        <button><a href="/contact">Contact me!</a></button>
-      </div> */}
-
       <Parallax/>
 
       <div id='technologies' style={{width:'100%', paddingTop:'250px', paddingBottom:'150px'}}>

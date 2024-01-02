@@ -103,7 +103,11 @@
         color: var(--special-color);
     }
 }
-
+@media (max-width: 600px) {
+    .container {
+        padding: 100px 50px;
+    }
+}
 @media (max-width: 500px) {
     .header {
         width: 100%;

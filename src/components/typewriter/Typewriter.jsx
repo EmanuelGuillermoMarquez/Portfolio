@@ -11,7 +11,7 @@ export const Typewriter = ({sequence}) => {
             preRenderFirstString={true}
             sequence={sequence}
             speed={50}
-            style={{ fontSize: '18px' }}
+            //style={{ fontSize: '24px' }}
             repeat={Infinity}
             className={styles.cursor_type}
             cursor={false}

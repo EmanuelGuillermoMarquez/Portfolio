@@ -26,7 +26,7 @@ export default function Parallax() {
     const parallaxEfect = () => {
 
         const value = window.scrollY;
-        //console.log(value);
+        console.log(value);
 
         if(value === 0) {
             text_left.current.style.left = '0px';
@@ -34,16 +34,28 @@ export default function Parallax() {
             btn.current.style.right = '-300px';
         };
 
-        if(window.matchMedia('(max-width: 800px)').matches) {
-            //console.log('800');
-            //if(value === 0) btn.current.style.right = '-200px';
+        if(window.matchMedia('(max-width: 500px)').matches) {
+            if(value >= 1300) btn.current.style.right = '0';
+
+            text_left.current.style.left = value * 0.05 + 'px';
+            text_right.current.style.right = value * 0.05 + 'px';
+            text_right.current.style.left = 'unset';
+        }
+        else if(window.matchMedia('(max-width: 600px)').matches) {
             if(value >= 1200) btn.current.style.right = '0';
 
-            text_left.current.style.left = '100px';
-            text_right.current.style.left = '100px';
+            text_left.current.style.left = value * 0.05 + 'px';
+            text_right.current.style.right = value * 0.05 + 'px';
+            text_right.current.style.left = 'unset';
+        }
+        else if(window.matchMedia('(max-width: 840px)').matches) {
+            if(value >= 1200) btn.current.style.right = '0';
+
+            text_left.current.style.left = value * 0.1 + 'px';
+            text_right.current.style.right = value * 0.1 + 'px';
+            text_right.current.style.left = 'unset';
         }
         else if(window.matchMedia('(max-width: 1000px)').matches) {
-            //if(value === 0) btn.current.style.right = '-200px';
             if(value >= 700) btn.current.style.right = '0';
 
             text_left.current.style.left = value * 0.1 + 'px';
@@ -51,27 +63,27 @@ export default function Parallax() {
             text_right.current.style.left = 'unset';
         }
         else if(window.matchMedia('(max-width: 1200px)').matches) {
-            //if(value === 0) btn.current.style.right = '-200px';
             if(value >= 600) btn.current.style.right = '0';
 
             text_left.current.style.left = value * 0.2 + 'px';
+            text_right.current.style.right = value * 0.45 + 'px';
+            text_right.current.style.left = 'unset';
+        }
+        else if(window.matchMedia('(max-width: 1300px)').matches){
+            if(value >= 600) btn.current.style.right = '0';
+    
+            text_left.current.style.left = value * 0.25 + 'px';
             text_right.current.style.right = value * 0.5 + 'px';
             text_right.current.style.left = 'unset';
         }
         else {
-            //if(value === 0) btn.current.style.right = '-200px';
             if(value >= 600) btn.current.style.right = '0';
     
             text_left.current.style.left = value * 0.25 + 'px';
-            text_right.current.style.right = value * 0.75 + 'px';
+            text_right.current.style.right = value * 0.7 + 'px';
             text_right.current.style.left = 'unset';
         };
-
     };
-
-    /* if(typeof window !== 'undefined') {
-        window.addEventListener('scroll', parallaxEfect)
-    } */
 
     return (
         <div className={styles.container}>

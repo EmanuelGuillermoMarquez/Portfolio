@@ -56,7 +56,7 @@ export default function AboutPage() {
             <section className={jost.className}>
                 <div ref={ref} className={styles.desc}>
                     <div className={styles.info}>
-                        <h2>I design and build digital products</h2>
+                        <h2>I design and build digital things</h2>
                         <h2>Also I'm a lawyer</h2>
                     </div>
 
