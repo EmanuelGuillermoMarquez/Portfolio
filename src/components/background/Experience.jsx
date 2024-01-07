@@ -1,7 +1,13 @@
+'use client'
+
 import React from 'react';
 import styles from './background.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function Experience() {
+
+    const router = useRouter();
+
     return (
         <div id='experiencie' className={styles.experience_container}>
             <h2>Professional experience</h2>
@@ -24,7 +30,7 @@ export default function Experience() {
 
             <p>Additionally, I trained in agile work methodologies, specifically SCRUM.</p>
 
-            <button>See projects</button>
+            <button onClick={() => router.push('/projects')}>See projects</button>
 
         </div>
     );

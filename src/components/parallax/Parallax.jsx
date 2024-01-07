@@ -26,7 +26,7 @@ export default function Parallax() {
     const parallaxEfect = () => {
 
         const value = window.scrollY;
-        console.log(value);
+        //console.log(value);
 
         if(value === 0) {
             text_left.current.style.left = '0px';

@@ -19,7 +19,7 @@ const links = [
   },
   {
     title: 'Projects',
-    url: '/proyects'
+    url: '/projects'
   },
   {
     title: 'Services',

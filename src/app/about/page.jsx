@@ -53,8 +53,9 @@ export default function AboutPage() {
                     <div className={styles.grad_bottom}></div>
                 </div>
             </div>
-            <section className={jost.className}>
-                <div ref={ref} className={styles.desc}>
+
+            <div ref={ref} className={styles.desc}>
+                <div className={jost.className}> 
                     <div className={styles.info}>
                         <h2>I design and build digital things</h2>
                         <h2>Also I'm a lawyer</h2>
@@ -71,7 +72,8 @@ export default function AboutPage() {
                         <button><a href='/contact'>Let's Start!</a></button>    
                     </div>
                 </div>
-            </section>
+            </div>
+            
         </div>
     );
 };
