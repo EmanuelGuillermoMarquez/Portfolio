@@ -76,17 +76,9 @@
     width: 100%;
 }
 .links a:hover > p {
-    transform: translateX(20px);
+    transform: translateX(30px);
     color: var(--special-color);
 }
-
-/* .links strong {
-    color: var(--special-color);
-    
-}
-.links div:hover > p {
-    transform: translateX(20px);
-} */
 
 @media (max-width: 800px) {
     .header {

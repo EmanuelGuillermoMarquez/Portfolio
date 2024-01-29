@@ -49,7 +49,7 @@ export default function AboutPage() {
                 </div>
                 <div className={styles.image}>
                     <div className={styles.grad_top}></div>
-                    <img src='/profile_image.jpg' alt='creator_img'/>
+                    <img src='/about_image.webp' alt='creator_img'/>
                     <div className={styles.grad_bottom}></div>
                 </div>
             </div>

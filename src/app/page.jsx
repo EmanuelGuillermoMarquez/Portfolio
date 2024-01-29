@@ -34,7 +34,7 @@ export default function Home() {
               <Typewriter sequence={sequence} />
             </div>
           </div>
-          <Image src='/profile_image.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
+          <Image src='/profile_image2.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
         </div>
 
 
