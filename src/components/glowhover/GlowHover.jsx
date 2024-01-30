@@ -12,13 +12,13 @@ export const GlowHover = () => {
     const home = path === '/' || path.includes('#');
 
     useEffect(() => {
-        if(home) {
+        if(home && typeof window != 'undefined') {
             //console.log(home);
             window.addEventListener('mousemove', pointerMove);
         }
 
         return () => {
-            window.removeEventListener('mousemove', pointerMove)
+            if(typeof window != 'undefined') window.removeEventListener('mousemove', pointerMove)
         };
     },[home]);
     

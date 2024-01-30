@@ -15,13 +15,13 @@ export default function Parallax() {
     const home = path === '/' || path.includes('#');
 
     useEffect(() => {
-        if(home) {
+        if(home && typeof window != 'undefined') {
             window.addEventListener('scroll', parallaxEfect);
         };
         return () => {
-            window.removeEventListener('scroll', parallaxEfect);
+            if(typeof window != 'undefined') window.removeEventListener('scroll', parallaxEfect);
         };
-    }, [window.matchMedia('(max-width: 800px)').matches, window.matchMedia('(max-width: 1000px)').matches, window.matchMedia('(max-width: 1200px)').matches, home]);
+    }, [home]);
 
     const parallaxEfect = () => {
 

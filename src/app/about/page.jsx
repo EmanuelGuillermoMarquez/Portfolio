@@ -16,11 +16,11 @@ export default function AboutPage() {
     const route = path === '/about';
 
     useEffect(() => {
-        if(route) {
+        if(route && typeof window != 'undefined') {
             window.addEventListener('scroll', parallaxEfect);
         };
         return () => {
-            window.removeEventListener('scroll', parallaxEfect);
+            if(typeof window != 'undefined') window.removeEventListener('scroll', parallaxEfect);
         };
     }, [route]);
 
