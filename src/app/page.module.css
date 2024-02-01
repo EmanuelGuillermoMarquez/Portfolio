@@ -242,7 +242,6 @@
   }
   .grid {
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
   }
   .card {
     padding: 2rem;
@@ -274,6 +273,18 @@
   .section_info h1 {
     font-size: 24px;
     letter-spacing: 0.4rem; 
+  }
+}
+@media (max-width: 450px) {
+  .section_info h1 {
+    font-size: 20px;
+    letter-spacing: 0.3rem; 
+  }
+  .card h2 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 14px;
   }
 }
 

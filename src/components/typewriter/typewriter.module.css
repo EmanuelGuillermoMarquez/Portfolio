@@ -25,3 +25,11 @@
     font-size: 18px;
   }
 }
+@media (max-width: 500px) {
+  .cursor_type {
+    font-size: 16px;
+  }
+  .cursor_type::after {
+    font-size: 16px;
+  }
+}

@@ -253,4 +253,9 @@
     .slide {
         height: 250px;
     }
+    .container h3 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+    }
 }

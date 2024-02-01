@@ -92,7 +92,7 @@
 }
 .desc h2 {
     font-size: 32px;
-    line-height: 60px;
+    line-height: 4rem;
     white-space: nowrap;
 }
 .desc p {
@@ -139,7 +139,7 @@
     }
     .desc h2 {
         font-size: 24px;
-        line-height: 48px;
+        line-height: 3.5rem;
     }
     .image {
         right: -50%;
@@ -164,11 +164,6 @@
         letter-spacing: 0.3rem;
         font-size: 32px;
     }
-    .desc h2 {
-        font-size: 24px;
-        line-height: 48px;
-        
-    }
     .desc p {
         font-size: 16px;
         margin: 20px 0;
@@ -182,5 +177,27 @@
     } */
     .desc .info {
         padding: 10rem 0;
+    }
+}
+@media (max-width: 450px) {
+    .title h1 {
+        line-height: 4rem;
+        letter-spacing: 0.2rem;
+        font-size: 30px;
+    }
+    .desc h2 {
+        font-size: 20px;
+        line-height: 3.2rem;
+    }
+}
+@media (max-width: 375px) {
+    .title h1 {
+        line-height: 3.5rem;
+        letter-spacing: 0.2rem;
+        font-size: 24px;
+    }
+    .desc h2 {
+        font-size: 18px;
+        line-height: 3rem;
     }
 }

@@ -67,7 +67,7 @@ export default function AboutPage() {
                     <p>I currently work as a lawyer and, within the IT world, I work remotely and independently based on the needs of each client, and always predisposed to new opportunities.</p>
                     <p>I am looking for new opportunities where I can contribute my knowledge and, at the same time, grow professionally.</p>
                     <p>I'm from Santa Fe, Argentina.</p>
-                    <div style={{display:'flex', justifyContent:'space-between', width:'100%', padding:'4rem 0 '}}>
+                    <div style={{display:'flex', justifyContent:'space-between', gap:'20px', width:'100%', padding:'4rem 0 '}}>
                         <button><a href='/projects'>Recent works...</a></button>
                         <button><a href='/contact'>Let's Start!</a></button>    
                     </div>

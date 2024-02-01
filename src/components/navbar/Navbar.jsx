@@ -78,10 +78,10 @@ function Navbar() {
           </Link>
         ))}
 
-        <div style={{position:'relative'}}>
+        <div style={{position:'relative', height:'min-content'}}>
           <div ref={ref} className={styles.theme_switch} onClick={handleThemeSwitch}>
-            <DarkModeIcon fontSize='10px'/>
-            <LightModeIcon fontSize='10px'/>
+            <DarkModeIcon fontSize='10px' className={styles.icon}/>
+            <LightModeIcon fontSize='10px' className={styles.icon}/>
           </div>
           <div style={{height: '1px', margin: '1px', backgroundColor: 'transparent'}}></div>
         </div>
