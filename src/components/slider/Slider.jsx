@@ -35,31 +35,27 @@ export default function Slider() {
                     pauseOnMouseEnter: false,
                 }}
                 speed={2500}
-                pagination={{
+                /* pagination={{
                     clickable: true,
                     dynamicBullets: true,
-                }}
+                }} */
                 breakpoints={{
                     1200: {
                         slidesPerView: 5,
                         spaceBetween: 30},
                     1000: {
-                        slidesPerView: 5,
-                        spaceBetween: 20},
+                        slidesPerView: 4,
+                        spaceBetween: 30},
                     800: {
                         slidesPerView: 4,
                         spaceBetween: 20
                     },
-                    600: {
+                    400: {
                         slidesPerView: 3,
                         spaceBetween: 20
                     },
-                    400: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
-                    },
                     200: {
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                         spaceBetween: 20
                     },
 

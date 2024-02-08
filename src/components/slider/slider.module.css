@@ -22,8 +22,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
 }
 .slide img {
     object-fit: contain;
@@ -33,4 +33,25 @@
 
 .pagination {
     background-color: var(--special-color);
+}
+
+@media (max-width: 800px) {
+    .slide {
+        height: 120px;
+        width: 150px;
+    }
+    .slide img {
+        height: 80px;
+        width: 120px;
+    }
+}
+@media (max-width: 500px) {
+    .slide {
+        height: 120px;
+        width: 150px;
+    }
+    .slide img {
+        height: 60px;
+        width: 120px;
+    }
 }

@@ -35,23 +35,23 @@ export default function Parallax() {
         };
 
         if(window.matchMedia('(max-width: 400px)').matches) {
-            if(value >= 1300) btn.current.style.right = '0';
-
-            text_left.current.style.left = value * 0.05 + 'px';
-            text_right.current.style.right = value * 0.03 + 'px';
-            text_right.current.style.left = 'unset';
-        }
-        else if(window.matchMedia('(max-width: 500px)').matches) {
-            if(value >= 1300) btn.current.style.right = '0';
+            if(value >= 1150) btn.current.style.right = '0';
 
             text_left.current.style.left = value * 0.05 + 'px';
             text_right.current.style.right = value * 0.04 + 'px';
             text_right.current.style.left = 'unset';
         }
+        else if(window.matchMedia('(max-width: 500px)').matches) {
+            if(value >= 1150) btn.current.style.right = '0';
+
+            text_left.current.style.left = value * 0.055 + 'px';
+            text_right.current.style.right = value * 0.045 + 'px';
+            text_right.current.style.left = 'unset';
+        }
         else if(window.matchMedia('(max-width: 600px)').matches) {
             if(value >= 1200) btn.current.style.right = '0';
 
-            text_left.current.style.left = value * 0.05 + 'px';
+            text_left.current.style.left = value * 0.06 + 'px';
             text_right.current.style.right = value * 0.05 + 'px';
             text_right.current.style.left = 'unset';
         }

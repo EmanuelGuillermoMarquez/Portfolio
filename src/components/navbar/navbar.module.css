@@ -136,6 +136,11 @@ text-decoration: none;
 }
 @media (max-width: 400px) {
     .links{
+        gap: 15px;
+    }
+}
+@media (max-width: 350px) {
+    .links{
         gap: 10px;
     }
 }
