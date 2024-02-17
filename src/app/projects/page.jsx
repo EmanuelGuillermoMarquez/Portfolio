@@ -21,7 +21,8 @@ export default function ProjectsPage() {
         vitality: [{src:'/vitality_1.webp'} , {src:'/vitality_2.webp'} , {src:'/vitality_3.webp'} , {src:'/vitality_4.webp'} , {src:'/vitality_5.webp'} , {src:'/vitality_6.webp'}, {src:'/vitality_7.webp'}],
         auto: [{src:'/auto_1.webp'} , {src:'/auto_2.webp'} , {src:'/auto_3.webp'} , {src:'/auto_4.webp'} , {src:'/auto_5.webp'} , {src:'/auto_6.webp'}, {src:'/auto_7.webp'}],
         tetris: [{src:'/tetris_1.webp'} , {src:'/tetris_2.webp'} , {src:'/tetris_3.webp'} , {src:'/tetris_4.webp'} , {src:'/tetris_5.webp'}],
-        todo: [{src:'/todo_1.webp'} , {src:'/todo_2.webp'} , {src:'/todo_3.webp'} , {src:'/todo_4.webp'}]
+        todo: [{src:'/todo_1.webp'} , {src:'/todo_2.webp'} , {src:'/todo_3.webp'} , {src:'/todo_4.webp'}],
+        microservices: [{src:'/micro_1.webp'} , {src:'/micro_2.webp'} , {src:'/micro_3.webp'} , {src:'/micro_4.webp'}, {src:'/micro_5.webp'} , {src:'/micro_6.webp'} , {src:'/micro_7.webp'} , {src:'/micro_8.webp'}]
     }
 
     return (
@@ -34,16 +35,21 @@ export default function ProjectsPage() {
                 <div className={styles.item}>
                     <h2>AutoBaires</h2>
                     <p>E-commerce for a car dealership, developed from React with NextJS, using NodeJS in the backend and MongoDB as a database.</p>
+                    {/* <section className={styles.gallery}>
+                        {projects.auto.map((item, index) => (
+                            <img key={index} src={item.src} alt={`autobaires${index}`}/>
+                        ))}
+                    </section> */}
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        autoplay={{
+                        /* autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
-                        }}
-                        speed={2500}
+                        }} */
+                        speed={1000}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -76,12 +82,12 @@ export default function ProjectsPage() {
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        autoplay={{
+                        /* autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
-                        }}
-                        speed={2500}
+                        }} */
+                        speed={1000}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -108,18 +114,56 @@ export default function ProjectsPage() {
                     <p><strong>Coming soon deploy...</strong></p>
                 </div>
                 <div className={styles.item}>
+                    <h2>API Microservices</h2>
+                    <p>Basic API on information from the Star Wars movie saga, developed with a microservices structure through Docker containers and MongoDB database, using the Google Cloud service to deploy it.</p>
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={50}
+                        loop={true}
+                        /* autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: false,
+                        }} */
+                        speed={1000}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className={styles.swiper}
+                    >
+
+                        {projects.microservices.map((item, index) => (
+                            <SwiperSlide className={styles.slide} key={`microservicesAPI${index}`}>
+                                <div className={styles.window_frame}>
+                                    <div className={styles.upper}>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <img src={item.src} alt={`microservicesAPI${index}`}/>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+
+                    </Swiper>
+                    <p><strong>Pending development of user interface...</strong></p>
+                </div>
+                <div className={styles.item}>
                     <h2>Vitality Medical Group</h2>
                     <p>Web application for a medical clinic designed and developed in a group, using scrum methodology, with Javascript, React, NodeJS, SQL, Auth0, Mercado Libre API, among other technologies.</p>
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        autoplay={{
+                        /* autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
-                        }}
-                        speed={2500}
+                        }} */
+                        speed={1000}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -152,12 +196,12 @@ export default function ProjectsPage() {
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        autoplay={{
+                        /* autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
-                        }}
-                        speed={2500}
+                        }} */
+                        speed={1000}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -190,12 +234,12 @@ export default function ProjectsPage() {
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        autoplay={{
+                        /* autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
-                        }}
-                        speed={2500}
+                        }} */
+                        speed={1000}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -221,7 +265,7 @@ export default function ProjectsPage() {
                     </Swiper>
                     <p><strong>Coming soon deploy...</strong></p>
                 </div>
-                
+
                 <div style={{display:'flex', flexDirection:'column', gap:'50px', width:'100%', padding:'10rem 0 '}}>
                     <h3>If you liked my work, we should have a coffee and talk...</h3>
                     <button onClick={() => router.push('/contact')}>Let's do it!</button>    
