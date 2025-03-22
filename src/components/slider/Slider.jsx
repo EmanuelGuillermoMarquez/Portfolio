@@ -14,6 +14,7 @@ export default function Slider() {
         {title: 'javascript', src: '/javascript-logo.svg'},
         {title: 'react', src: '/react.png'},
         {title: 'redux', src: '/redux.svg'},
+        {title: 'vuejs', src: '/vuejs.svg'},
         {title: 'next', src: '/next.svg'},
         {title: 'nodejs', src: '/nodejs.svg'},
         {title: 'express', src: '/expressjs.svg'},

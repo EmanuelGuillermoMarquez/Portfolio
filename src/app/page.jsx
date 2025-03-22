@@ -67,11 +67,9 @@ export default function Home() {
         <Slider/>
       </div>
 
-      <Education/>
-
       <Experience/>
 
-      
+      <Education/>      
 
     </main>
   )

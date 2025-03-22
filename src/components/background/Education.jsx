@@ -6,7 +6,7 @@ import styles from './background.module.css';
 
 export default function Education() {
 
-    const CV_URL = 'https://drive.google.com/file/d/1EpOKfxUc-7FMGl28HbYzDPTMwaTkRR28/view?usp=sharing';
+    const CV_URL = 'https://drive.google.com/file/d/1WLPcXoFxDKiwdXUCUmFZPfwiPE3J2SsX/view?usp=sharing';
 
     return (
         <div id='education' className={styles.education_container}>
