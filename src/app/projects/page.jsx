@@ -22,7 +22,8 @@ export default function ProjectsPage() {
         auto: [{src:'/auto_1.webp'} , {src:'/auto_2.webp'} , {src:'/auto_3.webp'} , {src:'/auto_4.webp'} , {src:'/auto_5.webp'} , {src:'/auto_6.webp'}, {src:'/auto_7.webp'}],
         tetris: [{src:'/tetris_1.webp'} , {src:'/tetris_2.webp'} , {src:'/tetris_3.webp'} , {src:'/tetris_4.webp'} , {src:'/tetris_5.webp'}],
         todo: [{src:'/todo_1.webp'} , {src:'/todo_2.webp'} , {src:'/todo_3.webp'} , {src:'/todo_4.webp'}],
-        microservices: [{src:'/micro_1.webp'} , {src:'/micro_2.webp'} , {src:'/micro_3.webp'} , {src:'/micro_4.webp'}, {src:'/micro_5.webp'} , {src:'/micro_6.webp'} , {src:'/micro_7.webp'} , {src:'/micro_8.webp'}]
+        microservices: [{src:'/micro_1.webp'} , {src:'/micro_2.webp'} , {src:'/micro_3.webp'} , {src:'/micro_4.webp'}, {src:'/micro_5.webp'} , {src:'/micro_6.webp'} , {src:'/micro_7.webp'} , {src:'/micro_8.webp'}],
+        innova: [{src:'/innova1.webp'} , {src:'/innova2.webp'} , {src:'/innova3.webp'} , {src:'/innova4.webp'}, {src:'/innova5.webp'}]
     }
 
     return (
@@ -32,6 +33,49 @@ export default function ProjectsPage() {
             </div>
 
             <section className={jost.className} style={{width:'100%'}}>
+                <div className={styles.item}>
+                    <h2>InnovaApps</h2>
+                    <p>I contributed to the development and maintenance of business management web applications that managed billing, inventory, accounting, client and patient management, and other digital tools necessary for a business. The application was developed entirely with VueJS on the frontend, NodeJS with Express and Sequelize on the backend, and MySQL as the database.</p>
+                    {/* <section className={styles.gallery}>
+                        {projects.auto.map((item, index) => (
+                            <img key={index} src={item.src} alt={`autobaires${index}`}/>
+                        ))}
+                    </section> */}
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={50}
+                        loop={true}
+                        /* autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: false,
+                        }} */
+                        speed={1000}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className={styles.swiper}
+                    >
+
+                        {projects.innova.map((item, index) => (
+                            <SwiperSlide className={styles.slide} key={`innova${index}`}>
+                                <div className={styles.window_frame}>
+                                    <div className={styles.upper}>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <img src={item.src} alt={`innova${index}`}/>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+
+                    </Swiper>
+                    <p><strong>In production...</strong></p>
+                </div>
                 <div className={styles.item}>
                     <h2>AutoBaires</h2>
                     <p>E-commerce for a car dealership, developed from React with NextJS, using NodeJS in the backend and MongoDB as a database.</p>

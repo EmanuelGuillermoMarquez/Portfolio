@@ -176,9 +176,9 @@
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
-  .image:hover {
+  /* .image:hover {
     filter: drop-shadow(1px 1px 5px var(--special-color));
-  }
+  } */
 }
 
 /* Tablet and Smaller Desktop */

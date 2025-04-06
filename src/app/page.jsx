@@ -34,18 +34,18 @@ export default function Home() {
               <Typewriter sequence={sequence} />
             </div>
           </div>
-          <Image src='/profile_image2.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
+          <Image src='/profile.jpg' alt= "profile" width={240} height={240} className={styles.image} priority/>
         </div>
 
 
         <div className={styles.grid}>
-          <a href='#education' className={styles.card}>
-            <h2>Education</h2>
-            <p>Information about my academic background.</p>
-          </a>
           <a href='#experiencie' className={styles.card}>
             <h2>Experience</h2>
             <p>Information about my professional experience.</p>
+          </a>
+          <a href='#education' className={styles.card}>
+            <h2>Education</h2>
+            <p>Information about my academic background.</p>
           </a>
           <a href='#technologies' className={styles.card}>
             <h2>Technologies</h2>
