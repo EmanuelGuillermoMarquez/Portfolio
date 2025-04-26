@@ -6,6 +6,7 @@ import Parallax from '@/components/parallax/Parallax';
 import Slider from '@/components/slider/Slider';
 import Education from '@/components/background/Education';
 import Experience from '@/components/background/Experience';
+import Timeline from '@/components/timeline/Timeline';
 import styles from './page.module.css';
 
 const jost = Jost({ subsets: ['latin'] });
@@ -43,8 +44,8 @@ export default function Home() {
             <h2>Experience</h2>
             <p>Information about my professional experience.</p>
           </a>
-          <a href='#education' className={styles.card}>
-            <h2>Education</h2>
+          <a href='#background' className={styles.card}>
+            <h2>Background</h2>
             <p>Information about my academic background.</p>
           </a>
           <a href='#technologies' className={styles.card}>
@@ -69,7 +70,7 @@ export default function Home() {
 
       <Experience/>
 
-      <Education/>      
+      <Timeline/>   
 
     </main>
   )

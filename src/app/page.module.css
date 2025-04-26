@@ -109,7 +109,7 @@
   object-fit: cover;
   margin: 2rem 0;
   transition: all 1s ease-in-out;
-  filter: opacity(0.8);
+  filter: opacity(0.9);
 }
 
 .grid {

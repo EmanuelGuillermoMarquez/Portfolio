@@ -24,18 +24,6 @@ export default function Experience() {
 
             <hr/>
 
-            <p>While studying programming, I started working on freelance projects, gaining experience and deepening my skills mainly with the <strong>React</strong>, <strong>NodeJs</strong>, <strong>Express</strong> and <strong>PostgreSQL</strong> stack.</p>
-           
-            <hr/>
-
-            <p>After graduating, I continued to contribute freelance to projects, gaining experience and knowledge in other technologies such as <strong>NextJs</strong>, <strong>MongoDB</strong>, <strong>Docker</strong>, <strong>AWS</strong>, <strong>Google Cloud</strong>, and others.</p>
-
-            <hr/>
-
-            <p>In 2024 I started working for an international company developing and maintaining web applications using <strong>VueJs</strong> as the front-end, <strong>NodeJs</strong> with Express as the back-end, and <strong>MySQL</strong> as the database, using libraries such as JWT, Vuetify, and DevExtreme.</p>
-
-            <hr/>
-
             <button onClick={() => router.push('/projects')}>See projects</button>
 
         </div>

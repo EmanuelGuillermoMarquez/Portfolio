@@ -1,0 +1,157 @@
+.timelineSection {
+    width: 100%;
+    min-height: 500px;
+    padding: 100px;
+}
+  
+.title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: var(--special-color);
+}
+
+.timeline {
+    position: relative;
+    margin: auto;
+    padding: 2rem 0;
+    max-width: 100%;
+    /* border-left: 3px solid var(--special-color); */
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--special-color);
+    transform: translateX(-50%);
+}
+
+.event {
+    position: relative;
+    width: 45%;
+    padding: 1.5rem;
+    background: rgba(var(--card-rgb), 0.3);
+    border: 1px solid rgba(var(--card-border-rgb), 0.2);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transform: translateY(50px);
+    /* animation: fadeSlideIn 1s ease-out forwards; */
+    transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.left {
+    left: 0;
+    margin-left: 0;
+}
+  
+.right {
+    left: 55%;
+}
+
+.icon {
+    position: absolute;
+    top: 1.2rem;
+    background-color: var(--special-color);
+    color: white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.left .icon {
+    right: -1rem;
+}
+
+.right .icon {
+    left: -1rem;
+}
+
+.content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animación */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes hoverShake {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Habilita el efecto hover solo en dispositivos no tactiles */
+@media (hover: hover) and (pointer: fine) {
+    .event:hover .icon {
+      animation: hoverShake 0.3s ease-out forwards;
+    }
+    .event:hover {
+       box-shadow: 0 3px 10px var(--special-color);
+    }
+  }
+
+@media (max-width: 768px) {
+    .event,
+    .left,
+    .right {
+        width: calc(100% - 2rem);
+        left: 2rem !important;
+        margin-bottom: 2rem;
+    }
+
+    .timeline::before {
+        left: 0px;
+    }
+
+    .icon {
+        left: -3rem !important;
+        top: calc(50% - 1rem);
+    }
+
+    .content {
+        margin-left: 2.5rem;
+    }
+}
+  
