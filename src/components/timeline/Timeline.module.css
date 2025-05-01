@@ -107,7 +107,8 @@
         transform: translateY(0);
     }
 }
-@keyframes hoverShake {
+
+@keyframes hoverBounce {
     0% {
         transform: translateY(0);
     }
@@ -125,20 +126,30 @@
 /* Habilita el efecto hover solo en dispositivos no tactiles */
 @media (hover: hover) and (pointer: fine) {
     .event:hover .icon {
-      animation: hoverShake 0.3s ease-out forwards;
-    }
-    .event:hover {
-       box-shadow: 0 3px 10px var(--special-color);
+        animation-delay: 0s !important;
+        animation: hoverBounce 0.5s ease;
     }
   }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .event,
     .left,
     .right {
         width: calc(100% - 2rem);
         left: 2rem !important;
         margin-bottom: 2rem;
+    }
+
+    .event {
+        transform: translateX(100px);
+    }
+
+    .visible {
+        transform: translateX(0);
+    }
+
+    .timeline {
+        padding: 0;
     }
 
     .timeline::before {
@@ -149,9 +160,40 @@
         left: -3rem !important;
         top: calc(50% - 1rem);
     }
+}
 
-    .content {
-        margin-left: 2.5rem;
+@media (max-width: 600px) {
+    .timelineSection {
+        padding: 50px;
+    }
+  
+    .event,
+    .left,
+    .right {
+        width: calc(100% - 2rem);
+        left: 2rem !important;
+        margin-bottom: 2rem;
+    }
+  
+    .timeline::before {
+      left: 0;
+    }
+  
+    .icon {
+        left: -3rem !important;
+        top: calc(50% - 1rem);
+    }
+
+    .content h3 {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
     }
 }
   

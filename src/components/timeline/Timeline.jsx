@@ -12,7 +12,7 @@ const timelineData = [
     {
         type: "work",
         title: "Remote work to InnovaB - Fullstack Developer",
-        date: "2024",
+        date: "2024 - 2025",
         description: "In 2024 I started working for an international company developing and maintaining web applications using VueJs as the front-end, NodeJs with Express as the back-end, and MySQL as the database, using libraries such as JWT, Vuetify, DevExtreme and others.",
     },
     {
@@ -56,11 +56,16 @@ export default function Timeline() {
                     
                     const { ref, inView } = useInView({
                         triggerOnce: true,
-                        threshold: 0.8,
+                        threshold: 0.3,
                     });                   
             
                     return (
-                        <div ref={ref} key={index} className={`${styles.event} ${index % 2 === 0 ? styles.left : styles.right} ${inView ? styles.visible : ""}`}>
+                        <div 
+                            ref={ref} 
+                            key={index} 
+                            className={`${styles.event} ${index % 2 === 0 ? styles.left : styles.right} ${inView ? styles.visible : ""}`}
+                            style={{ transitionDelay: `${index * 0.1}s` }}
+                        >
                             <div className={styles.icon}>
                                 {item.type === "education" ? <FaGraduationCap /> : <FaLaptopCode />}
                             </div>

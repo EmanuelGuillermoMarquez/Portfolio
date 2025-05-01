@@ -64,7 +64,7 @@ export default function Home() {
 
       <Parallax/>
 
-      <div id='technologies' style={{width:'100%', paddingTop:'250px', paddingBottom:'150px'}}>
+      <div id='technologies' style={{width:'100%', paddingTop:'100px', paddingBottom:'100px'}}>
         <Slider/>
       </div>
 
