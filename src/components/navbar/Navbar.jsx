@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -8,6 +8,8 @@ import { Jost } from 'next/font/google';
 import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import styles from './navbar.module.css';
 
 const jost = Jost({ subsets: ['latin'] });
@@ -40,6 +42,7 @@ function Navbar() {
 
   const ref = useRef(null);
   const path = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
   
   useEffect(() => {
     const dark_theme = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -62,23 +65,36 @@ function Navbar() {
       document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
     }
-  }
+  };
 
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
   
   return (
     <div className={styles.container}>
-      <div className={styles.links}>
-  
+
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+      </div>
+
+      <div className={`${styles.links} ${menuOpen ? styles.mobile_open : styles.mobile_close}`}>
         {links.map((link, index) =>(
-          <Link key = {index} href={link.url}>
-            <div className={path === link.url ? styles.item_selected : styles.item}>
+          <Link key = {index} href={link.url} onClick={toggleMenu}>
+            <div 
+              className={`${path === link.url ? styles.item_selected : styles.item} ${ menuOpen ? styles.fadeInItem : ''}`}
+              style={menuOpen ? { animationDelay: `${index * 0.2}s` } : {}}
+            >
               <p className={jost.className}>{link.title}</p>
               <div className={styles.underline}></div>
             </div>
           </Link>
         ))}
-
-        <div style={{position:'relative', height:'min-content'}}>
+      
+        <div 
+          className={`${styles.theme_container} ${ menuOpen ? styles.fadeInItem : ''}`}
+          style={menuOpen ? { animationDelay: `${(links.length + 1) * 0.2}s` } : {}}
+        >
           <div ref={ref} className={styles.theme_switch} onClick={handleThemeSwitch}>
             <DarkModeIcon fontSize='10px' className={styles.icon}/>
             <LightModeIcon fontSize='10px' className={styles.icon}/>

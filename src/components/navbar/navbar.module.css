@@ -21,6 +21,13 @@ text-decoration: none;
 
 } */
 
+.menuToggle {
+    display: none;
+    cursor: pointer;
+    color: var(--foreground-color);
+    z-index: 3;
+}
+
 .links {
     display: flex;
     align-items: center;
@@ -56,6 +63,11 @@ text-decoration: none;
     background-color: var(--special-color);
     width: 100%;
     
+}
+
+.theme_container {
+    position: relative;
+    height: min-content;
 }
 
 .theme_switch {
@@ -95,6 +107,23 @@ text-decoration: none;
     padding: 2px;
 }
 
+.fadeInItem {
+    opacity: 0;
+    animation: fadeSlideIn 1s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+
 @media (max-width: 800px) {
     .container {
         justify-content: center;
@@ -104,8 +133,11 @@ text-decoration: none;
     .container {
         padding: 0 50px;
     }
+    .links{
+        gap: 30px;
+    }
 }
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .container {
         justify-content: center;
     }
@@ -127,14 +159,13 @@ text-decoration: none;
     .theme_switch.dark_mode::before {
         left: unset;
         transform: translateX(calc(100%));
-        /* right: 0;  */   
     }
     .icon {
         font-size: 14px;
         padding: 2px;
     }
-}
-@media (max-width: 400px) {
+} */
+/* @media (max-width: 400px) {
     .links{
         gap: 15px;
     }
@@ -142,5 +173,44 @@ text-decoration: none;
 @media (max-width: 350px) {
     .links{
         gap: 10px;
+    }
+} */
+@media (max-width: 500px) {
+    .menuToggle {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+  
+    .links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100dvh;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background: linear-gradient(to bottom, rgb(var(--background-start-rgb)) , transparent 1000%);
+        padding: 20px;
+        padding-top: 50px;
+        z-index: 2;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .links.mobile_close {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+  
+    .links.mobile_open {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+    }
+  
+    .theme_container {
+        align-self: flex-start;
+        margin-top: 2rem;
     }
 }
