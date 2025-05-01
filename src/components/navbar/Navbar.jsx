@@ -52,15 +52,15 @@ function Navbar() {
 
     if (user_theme === 'dark' || !user_theme && dark_theme ) ref.current.classList.add(styles['dark_mode']);
     else ref.current.classList.remove(styles['dark_mode']);
+    
+    if(menuOpen === true) {    
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';      
+    }
+    else {
+      document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    }
 
-  }, []);
-
-  if(menuOpen === true) {    
-    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-  }
-  else {
-    document.getElementsByTagName('html')[0].style.overflow = 'auto';
-  }
+  }, [menuOpen]);
 
   const handleThemeSwitch = (e) => {
     ref.current.classList.toggle(styles['dark_mode']);
