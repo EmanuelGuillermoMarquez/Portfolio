@@ -55,6 +55,13 @@ function Navbar() {
 
   }, []);
 
+  if(menuOpen === true) {    
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+  }
+  else {
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+  }
+
   const handleThemeSwitch = (e) => {
     ref.current.classList.toggle(styles['dark_mode']);
     if(ref.current.classList.contains(styles['dark_mode'])) {
@@ -80,7 +87,7 @@ function Navbar() {
 
       <div className={`${styles.links} ${menuOpen ? styles.mobile_open : styles.mobile_close}`}>
         {links.map((link, index) =>(
-          <Link key = {index} href={link.url} onClick={toggleMenu}>
+          <Link key = {index} href={link.url} onClick={menuOpen ? toggleMenu : null}>
             <div 
               className={`${path === link.url ? styles.item_selected : styles.item} ${ menuOpen ? styles.fadeInItem : ''}`}
               style={menuOpen ? { animationDelay: `${index * 0.2}s` } : {}}

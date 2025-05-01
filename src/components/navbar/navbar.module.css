@@ -107,11 +107,6 @@ text-decoration: none;
     padding: 2px;
 }
 
-.fadeInItem {
-    opacity: 0;
-    animation: fadeSlideIn 1s ease forwards;
-}
-
 @keyframes fadeSlideIn {
     0% {
       opacity: 0;
@@ -212,5 +207,10 @@ text-decoration: none;
     .theme_container {
         align-self: flex-start;
         margin-top: 2rem;
+    }
+
+    .fadeInItem {
+        opacity: 0;
+        animation: fadeSlideIn 1s ease forwards;
     }
 }
