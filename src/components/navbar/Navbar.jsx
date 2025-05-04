@@ -81,8 +81,8 @@ function Navbar() {
   return (
     <div className={styles.container}>
 
-      <div className={styles.menuToggle} onClick={toggleMenu}>
-        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+      <div className={styles.menu_toggle} onClick={toggleMenu}>
+        {menuOpen ? <CloseIcon className={styles.menu_animated} /> : <MenuIcon className={styles.menu_animated} />}
       </div>
 
       <div className={`${styles.links} ${menuOpen ? styles.mobile_open : styles.mobile_close}`}>
